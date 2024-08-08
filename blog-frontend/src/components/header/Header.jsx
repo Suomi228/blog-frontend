@@ -1,13 +1,21 @@
-import React from 'react';
-import './header.css';
+import React from "react";
+import "./header.css";
 export default function Header() {
+  const isAuth = true;
   return (
-    <div className='container'>
+    <div className="container">
       <h1>Live Blog</h1>
-      <div className="buttons">
-        <button className='login'>Войти</button>
-        <button className='register'>Зарегистрироваться</button>
-      </div>
+      {isAuth ? (
+        <div className="buttons">
+          <button className="red">Выйти</button>
+          <button>Написать статью</button>
+        </div>
+      ) : (
+        <div className="buttons">
+          <button className="gray">Войти</button>
+          <button>Зарегистрироваться</button>
+        </div>
+      )}
     </div>
-  )
+  );
 }

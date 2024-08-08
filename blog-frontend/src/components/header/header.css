@@ -32,14 +32,26 @@
 .buttons button:active {
     background-color: #548d27;
 }
-.buttons .login{
+.buttons .gray{
     background-color: #d8dadd;
     color: #70737b;
 }
-.buttons .login:hover{
+.buttons .gray:hover{
     background-color: #e7e8ea;
     transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 }
-.buttons .login:active{
+.buttons .gray:active{
     background-color: #b0b3bb;
+}
+
+.buttons .red{
+    background-color: #e1472c;
+    color: #fff;
+}
+.buttons .red:hover{
+    background-color: #fc755d;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+.buttons .red:active{
+    background-color: #c92b0f;
 }
