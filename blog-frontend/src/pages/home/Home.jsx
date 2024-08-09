@@ -4,9 +4,11 @@ import "./home.css"
 export default function Home() {
   return (
     <div className='container-home'>
-      <Article/>
-      <Article/>
-      <Article/>
+      {/* <Article/> */}
+      <div className="article">
+        <Article/>
+      </div>
+      {/* <Article/> */}
     </div>
   )
 }
