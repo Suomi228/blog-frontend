@@ -1,12 +1,9 @@
 .container-home{
     display:grid;
     grid-template-columns: 1fr 2fr 1fr;
-    background-color: brown;
     margin-top: 10px;
 }
 .article{
     grid-column-start: 2;
     grid-column-end: 3;
-    border: 1px solid;
-
 }
