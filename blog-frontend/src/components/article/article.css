@@ -18,7 +18,7 @@
 .tags {
   list-style: none;
   padding: 0;
-  margin: 20px 0 0 0;
+  margin: 10px 0 0 0;
 }
 
 .tags li {
@@ -38,10 +38,15 @@
     text-decoration: underline;
   }
 }
+.bottom{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
 .postDetails {
   list-style: none;
   padding: 0;
-  margin: 10px 0 0 0;
   padding-left: 20px;
 }
 .postDetails li {
@@ -56,3 +61,13 @@
   height: 30px;
   margin-right: 5px;
 }
+.editButtons {
+    display: flex;
+    justify-content: center; 
+    gap: 10px;
+    margin-right: 20px;
+  }
+  .editButtons img{
+    width: 30px;
+    height: 30px;
+  }
