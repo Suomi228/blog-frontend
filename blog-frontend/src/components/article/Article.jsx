@@ -20,6 +20,7 @@ export default function Article({
         <img className="preview"
             src="https://www.marthastewart.com/thmb/Vgb9cQSlegZz5fcoSbkkqyHPmHY=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/338185-basic-pancakes-09-00b18f8418fd4e52bb2050173d083d04.jpg"
             alt=""
+            style={{ borderRadius: "10px 10px 0 0" }}
         />
       <UserInfo {...user} additionalText={createdAt} />
       <h2>{title}</h2>
