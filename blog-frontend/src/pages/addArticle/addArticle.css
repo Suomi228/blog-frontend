@@ -1,0 +1,42 @@
+.buttons {
+  display: flex;
+}
+Textfield{
+    border-color: #548d27;
+}
+.green_underline {
+    border-color: green;
+}
+.green_underline:active {
+    border-color: green;
+}
+.buttons .red{
+    height: 40px;
+    background-color: #e1472c;
+    color: #fff;
+}
+.buttons .red:hover{
+    background-color: #fb8c79;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+.buttons .red:active{
+    background-color: #c92b0f;
+}
+.green{
+    background-color: #8bca58;
+    color: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    border: none;
+    height: 40px;
+
+}
+.green:hover {
+    background-color: #c5e4ac;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+.green:active {
+    background-color: #548d27;
+}
