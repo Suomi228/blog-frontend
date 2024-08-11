@@ -2,6 +2,7 @@ import Article from "../../components/article/Article.jsx";
 import React from "react";
 import "./fullArticle.css";
 import CommentsBlock from "../../components/commentsBlock/CommentsBlock.jsx";
+import AddComment from "../../components/addComment/AddComment.jsx";
 export default function FullArticle() {
   return (
     <div className="container-full-article">
@@ -47,7 +48,9 @@ export default function FullArticle() {
           },
         ]}
         isLoading={false}
-      ></CommentsBlock>
+      >
+        <AddComment />
+      </CommentsBlock>
       </div>
       
     </div>

@@ -9,7 +9,7 @@ import Skeleton from "@mui/material/Skeleton";
 import "./commentsBlock.css";
 export default function CommentsBlock({ items, children, isLoading = true }) {
   return (
-    <div>
+    <div className='comment-content'>
        <h1 className='comment'>Комментарии</h1>
      <List>
         {(isLoading ? [...Array(5)] : items).map((obj, index) => (
@@ -38,6 +38,7 @@ export default function CommentsBlock({ items, children, isLoading = true }) {
           </React.Fragment>
         ))}
       </List>
+      {children}
     </div>
   )
 }
