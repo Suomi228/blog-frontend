@@ -31,6 +31,7 @@ export default function Article({
           </li>
         ))}
       </ul>
+      {children && <div className="content">{children}</div>}
       <div className="bottom">
           <ul className="postDetails">
             <li>
