@@ -18,7 +18,7 @@ export default function Login() {
         fullWidth
       />
       <TextField className="field" label="Пароль" fullWidth />
-      <button className='green'>
+      <button className='green-log'>
         Войти
       </button>
     </Paper>
