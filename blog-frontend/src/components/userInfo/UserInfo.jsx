@@ -2,7 +2,7 @@ import React from "react";
 import "./userInfo.css";
 export default function UserInfo({ avatarUrl, fullName, additionalText }) {
   return (
-    <div className="root">
+    <div className="user-content">
       <img
         className="avatar"
         src={avatarUrl || "/noavatar.png"}

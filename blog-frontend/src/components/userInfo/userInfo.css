@@ -1,10 +1,11 @@
-.root {
+.user-content {
   display: flex;
   align-items: center;
   padding-left: 10px;
+  padding-bottom: 0;
 }
 
-.root .avatar {
+.user-content .avatar {
   width: 30px;
   height: 30px;
   border-radius: 30px;
