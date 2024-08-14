@@ -1,5 +1,6 @@
 import Header from "./components/header/Header.jsx";
 import "./index.css";
+import { Routes, Route } from "react-router-dom";
 import Home from  './pages/home/Home.jsx';
 import AddArticle from "./pages/addArticle/AddArticle.jsx";
 import FullArticle from "./pages/fullArticle/FullArticle.jsx";
@@ -10,11 +11,13 @@ function App() {
     <>
       <Header/>
       <div className="container">
-          {/* <Home/> */}
-          {/* <AddArticle/> */}
-          <FullArticle/>
-          {/* <Login/> */}
-          {/* <Registration/> */}
+          <Routes>
+            <Route path="/" element={<Home/>}/>
+            <Route path="/articles/create" element={<AddArticle/>}/>
+            <Route path="/article/:id" element={<FullArticle/>}/>
+            <Route path="/login" element={<Login/>}/>
+            <Route path="/register" element={<Registration/>}/>
+          </Routes>
       </div>
     </>
   );

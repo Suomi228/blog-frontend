@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./article.css";
 import UserInfo from "../userInfo/UserInfo.jsx";
 export default function Article({
@@ -23,7 +24,7 @@ export default function Article({
             style={{ borderRadius: "10px 10px 0 0" }}
         />
       <UserInfo {...user} additionalText={createdAt} />
-      <h2>{title}</h2>
+      <h2>{isFullPost ? title : <Link to={`/article/${_id}`}>{title}</Link>}</h2>
       <ul className="tags">
         {tags.map((name) => (
           <li key={name}>
@@ -51,9 +52,9 @@ export default function Article({
           </ul>
             {isEditable && (
             <div className="editButtons">
-              <a href={`/posts/${_id}/edit`}>
+              <Link href={`/article/${_id}/edit`}>
                 <img src="https://static-00.iconduck.com/assets.00/edit-icon-512x512-v7ak1xco.png" alt="" />
-              </a>
+              </Link>
                 <img src="https://static-00.iconduck.com/assets.00/delete-icon-1864x2048-bp2i0gor.png" alt="" />
             </div>
           )}
