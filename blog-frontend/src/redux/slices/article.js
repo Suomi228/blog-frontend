@@ -1,5 +1,11 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
+import axios from "../../axios.js";
 
+
+export const fetchArticle = createAsyncThunk('/articles/fetchArticles', async()=>{
+  const {data} = await axios.get('/articles');
+  return data;
+})
 const initialState = {
   articles: {
     items: [],
@@ -15,20 +21,6 @@ const articleSlice = createSlice({
     name: "articles",
     initialState,
     reducer: {
-      fetchArticlesSuccess(state, action) {
-        state.items = action.payload;
-        state.status = "succeeded";
-      },
-      fetchArticlesError(state) {
-        state.status = "failed";
-      },
-      fetchTagsSuccess(state, action) {
-        state.tags.items = action.payload;
-        state.tags.status = "succeeded";
-      },
-      fetchTagsError(state) {
-        state.tags.status = "failed";
-      },
     },
 });
 export const articleReducer = articleSlice.reducer;

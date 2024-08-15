@@ -2,7 +2,15 @@ import React from "react";
 import Article from "../../components/article/Article.jsx";
 import "./home.css";
 import TagsBlock from "../../components/tagsBlock/TagsBlock.jsx";
+import axios from "../../axios.js";
+import { useDispatch } from "react-redux";
+import { fetchArticle } from "../../redux/slices/article.js";
 export default function Home() {
+  const dispatch = useDispatch();
+  React.useEffect(() => {
+      dispatch(fetchArticle());
+  }, []);
+
   return (
     <div className="container-home">
       <div className="tag">
@@ -22,6 +30,7 @@ export default function Home() {
           viewsCount={150}
           commentsCount={3}
           tags={["react", "fun", "typescript"]}
+          isLoading={true}
           isEditable={false}
         />
       </div>
